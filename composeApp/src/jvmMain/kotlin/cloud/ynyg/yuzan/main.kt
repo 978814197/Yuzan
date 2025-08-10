@@ -2,6 +2,7 @@ package cloud.ynyg.yuzan
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import cloud.ynyg.yuzan.app.App
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import yuzan.composeapp.generated.resources.Res
