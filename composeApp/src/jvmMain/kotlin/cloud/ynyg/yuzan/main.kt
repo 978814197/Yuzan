@@ -11,18 +11,25 @@ import yuzan.composeapp.generated.resources.Res
 import yuzan.composeapp.generated.resources.app_icon
 import yuzan.composeapp.generated.resources.app_name
 
-fun main() = application {
+/**
+ * 启动函数
+ */
+fun main() {
+    // 启动 Koin
     startKoin {
         modules(
             appModule
         )
     }
-
-    Window(
-        onCloseRequest = ::exitApplication,
-        title = stringResource(Res.string.app_name),
-        icon = painterResource(Res.drawable.app_icon)
-    ) {
-        App()
+    // 启动 Compose 应用
+    application {
+        // 创建主窗口
+        Window(
+            onCloseRequest = ::exitApplication,
+            title = stringResource(Res.string.app_name),
+            icon = painterResource(Res.drawable.app_icon)
+        ) {
+            App()
+        }
     }
 }
